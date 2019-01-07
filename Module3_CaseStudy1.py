@@ -30,9 +30,8 @@ print("Distance from Origin: ", disFromOrig)
 ##############################################
 #6. 
 
-for x in range(2000,3001):
-    if x%7==0 and x%5!=0 :
-        print(x  , end= ',')
+outlist = [x for x in range(2000,3001) if x%7==0 and x%5!=0]
+print(*outlist , sep = ',')
 
 ##############################################
 #7.
@@ -51,3 +50,14 @@ else:
     print("Factorial of ",n," is ",rec_fact(n))
 
 ##############################################
+#8. 
+import math
+d = input()
+dlist = d.split(',')
+def calc_formula(d):
+    C = 50
+    H = 30
+    return math.sqrt((2*C*int(d))/H)
+
+out = [int(calc_formula(x)) for x in dlist]
+print(*out , sep = ',')
