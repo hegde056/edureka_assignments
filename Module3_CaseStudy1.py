@@ -35,3 +35,19 @@ for x in range(2000,3001):
         print(x  , end= ',')
 
 ##############################################
+#7.
+def rec_fact( n ):
+    if n == 1:
+        return n
+    else:
+        return n*rec_fact(n-1)
+
+n =  int(input ("Enter number :"))       
+if n<0 :
+    print("no factorial of -ve num's")
+elif n==0:
+    print("Factorial of ",n," is ","1")
+else:
+    print("Factorial of ",n," is ",rec_fact(n))
+
+##############################################
